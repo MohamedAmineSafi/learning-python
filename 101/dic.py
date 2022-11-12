@@ -6,4 +6,8 @@ me = {
 
 me["personality"] = "Lovely"
 
-print(me["personality"])
+print(me)
+
+del me["IQ"]
+
+print(me)

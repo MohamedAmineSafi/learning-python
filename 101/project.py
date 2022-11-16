@@ -41,7 +41,12 @@ def processResult(pcChoice, playerInput):
 while True:
     playerInput = input("Rock, Paper or Scissors? ")
     pcChoice = random.choice(choiceList) #DO NOT NAME ANOTHER FOLDER RANDOM.PY
-    processResult(pcChoice, playerInput)
+    if playerInput in choiceList:
+        pass
+    else:
+        print("You are an idiot!")
+        break
 
+    processResult(pcChoice, playerInput)
     if getWinner(pcChoice, playerInput) == "Player":
         break

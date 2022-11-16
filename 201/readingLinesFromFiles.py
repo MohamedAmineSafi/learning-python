@@ -19,4 +19,15 @@ with open("201/email.txt", 'r') as file:
             i = i + 1
         return fileArr
     fileArr = removeLineBreak(fileArr)
+
+    def checkEmail(emailInput, fileArr):
+        there = 0
+        for email in fileArr:
+            if email == emailInput:
+                print("Email is there")
+                there = 1
+                break
+        if there == 0:
+            print("Email not there")
     
+    checkEmail("email8@gmail.com", fileArr)

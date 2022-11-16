@@ -29,16 +29,19 @@ def getWinner(PC, Player):
     
     if PC == "Scissors" and Player == "Scissors":
         return 0
-
-while True:
-    playerInput = input("Rock, Paper or Scissors? ")
-    pcChoice = random.choice(choiceList) #DO NOT NAME ANOTHER FOLDER RANDOM.PY
-
+def processResult(pcChoice, playerInput):
     getWinnerValue = getWinner(pcChoice, playerInput)
     if getWinnerValue == "Player":
         print(f"PC chose {pcChoice}, Player wins")
-        break
     elif getWinnerValue == "PC":
         print(f"PC chose {pcChoice}, PC wins")
     elif getWinnerValue == 0:
         print(f"PC chose {pcChoice}, DRAW")
+
+while True:
+    playerInput = input("Rock, Paper or Scissors? ")
+    pcChoice = random.choice(choiceList) #DO NOT NAME ANOTHER FOLDER RANDOM.PY
+    processResult(pcChoice, playerInput)
+
+    if getWinner(pcChoice, playerInput) == "Player":
+        break

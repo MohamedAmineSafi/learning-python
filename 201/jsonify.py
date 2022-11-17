@@ -59,5 +59,8 @@ jsonString = '''{
 }'''
 
 import json
-data = json.loads(jsonString, strict=False)['director'].strip()
+data = json.loads(jsonString, strict=False) # STRING TO JSON
+
+data['title'] = "13 Reasons Why"
+data = json.dumps(data) #JSON to String
 print(data)

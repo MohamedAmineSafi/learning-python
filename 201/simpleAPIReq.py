@@ -1,7 +1,6 @@
 import requests # Run <<pip install requests>>
-import time
 
-while True:
-    req = requests.get("https://kalob.io")
-    print(req.status_code)
-    time.sleep(5)
+req = requests.get("https://swapi.dev/api/people/1")
+person = req.json()
+
+print(person['name'])

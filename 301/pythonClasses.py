@@ -6,7 +6,7 @@
 
 # Example
 class Animal:
-    this_is_a_property = "Something"
+    this_is_a_property = ["Something", "Something Else"]
 
 the_animal = Animal()
-print(the_animal.this_is_a_property)
+print(the_animal.this_is_a_property[1])

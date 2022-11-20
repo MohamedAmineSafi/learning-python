@@ -5,7 +5,7 @@
 # animal = ThisIsAnAnimal()
 
 # Example
-class myClass:
+class MyClass:
     this_is_a_property = ["Something", "Something Else"]
 
     def thisIsAMethod(self):
@@ -19,6 +19,12 @@ class myClass:
     def myMethod(self):
         return self.this_is_a_property[1]
 
-newClass = myClass()
+newClass = MyClass()
 print(newClass.this_is_a_property)
 print(newClass.addName("Meedou"))
+
+class IAmTheBest(MyClass):
+    pass
+
+bestClass = IAmTheBest.this_is_a_property
+print("Second class", bestClass)

@@ -5,9 +5,6 @@ def myDecorator(func):
         print("Something Else")
     return wrapper
 
-# @myDecorator
+@myDecorator
 def sayHi():
     print("Hi")
-
-newFunc = myDecorator(sayHi)
-newFunc()
